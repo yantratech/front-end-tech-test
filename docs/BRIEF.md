@@ -24,7 +24,7 @@ It is up to you to decide what the MVP of this feature looks like and implement 
 
 ### Constraints
 
-- The `POST /api/trades/{id}/notes` endpoint is the only write path the API provides. The API has no email-sending capability, so for this MVP "sending" means logging the composed reply as a note — the assumption being it is picked up downstream. Your implementation should use this endpoint.
+- The `POST /api/trades/{id}/notes` endpoint is the only write path the API provides. The API has no email-sending capability, so for this MVP "sending" means logging the composed reply as a note — the assumption being it is picked up downstream. Your implementation can use this endpoint as is, or you can modify or replicate it. Regardless of how you approach this, be sure to rationalise your decisions and explain any trade-offs in `DECISIONS.md`.
 - Plain text is fine, no rich-text editor needed.
 - There are existing styled-components primitives you can use. Anything new that you add should feel as though it is part of the same design.
 - Auth is out of scope. If you need to reference the current user's address (e.g. in the content of a note), assume `trader@hedgefund.com`. The notes endpoint only accepts a `content` string — there is no sender field.
